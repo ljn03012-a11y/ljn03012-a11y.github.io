@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>밤소리 개인정보처리방침</title>
+
+<style>
+  :root {
+    --bg:      #F6F4EE;
+    --surface: #FFFFFF;
+    --ink:     #1A1B26;
+    --muted:   #6C6B79;
+    --line:    #E2DED2;
+    --accent:  #A96F0C;
+    --accent-soft: #F0E4CB;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:      #101119;
+      --surface: #191B25;
+      --ink:     #EFEBE1;
+      --muted:   #989AA8;
+      --line:    #2A2C38;
+      --accent:  #E9AC42;
+      --accent-soft: #2E2718;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg:      #101119;
+    --surface: #191B25;
+    --ink:     #EFEBE1;
+    --muted:   #989AA8;
+    --line:    #2A2C38;
+    --accent:  #E9AC42;
+    --accent-soft: #2E2718;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-size: 17px;
+    line-height: 1.78;
+    margin: 0;
+    padding: 0 24px 96px;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ---- 머리 ---- */
+
+  header {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(30px, 6vw, 40px);
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .dateline {
+    font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- 언어 고르기 ---- */
+
+  .langbar {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--line);
+    align-self: flex-start;
+    background: var(--surface);
+  }
+
+  .langbar button {
+    font: inherit;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    padding: 7px 16px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .langbar button + button { border-left: 1px solid var(--line); }
+
+  .langbar button[aria-pressed="true"] {
+    background: var(--accent-soft);
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .langbar button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  /* ---- 한눈에 보기 ---- */
+
+  .summary {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .summary h2 {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .summary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .summary li {
+    display: grid;
+    grid-template-columns: 1.1em 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .summary li::before {
+    content: "—";
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ---- 본문 ---- */
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  section h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2.2rem 1fr;
+    gap: 4px;
+    text-wrap: balance;
+  }
+
+  section h2 .num {
+    font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.32em;
+  }
+
+  section > p,
+  section > ul,
+  section > .tablewrap,
+  section > .callout {
+    margin-left: 2.2rem;
+  }
+
+  p { margin: 0; }
+
+  section ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  li::marker { color: var(--accent); }
+
+  a {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+  }
+
+  a:hover { color: var(--accent); }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .callout {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* ---- 표 ---- */
+
+  .tablewrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 34rem;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+
+  thead th {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td { border-bottom: 0; }
+
+  tbody th { font-weight: 700; }
+
+  /* ---- 꼬리 ---- */
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">밤소리 · Everhush · com.jluxena.sleep</p>
+    <h1 data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</h1>
+    <p class="dateline" data-ko="2026년 8월 17일부터 적용합니다" data-en="Effective 17 August 2026">2026년 8월 17일부터 적용합니다</p>
+    <div class="langbar">
+      <button type="button" id="btn-ko" aria-pressed="true">한국어</button>
+      <button type="button" id="btn-en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <!-- ===================== 한국어 ===================== -->
+  <main id="ko" lang="ko">
+
+    <div class="wrap" style="gap:40px">
+
+      <div class="summary">
+        <h2>한눈에 보기</h2>
+        <ul>
+          <li>회원가입이 없습니다. 이름도 이메일도 전화번호도 받지 않습니다.</li>
+          <li>마이크는 소리 크기를 재는 동안만 켜지고, 녹음해서 남기지 않습니다.</li>
+          <li>고른 소리와 설정은 <strong>폰 안에만</strong> 저장되고, 앱을 지우면 함께 사라집니다.</li>
+        </ul>
+      </div>
+
+      <section>
+        <h2><span class="num">01</span><span>누가 만들었고 어디로 연락하나</span></h2>
+        <p>이 앱은 <strong>JLUXENA STUDIO</strong> 가 만들었습니다. 이 방침에 대해 묻고 싶은 것이 있으면
+          <a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a> 으로 보내주세요.</p>
+        <p>이 방침은 안드로이드용 <strong>밤소리</strong>(한국 밖에서는 <strong>Everhush</strong>,
+          패키지 이름 <code>com.jluxena.sleep</code>)에 적용됩니다. 이름만 다를 뿐 같은 앱입니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span><span>개인정보를 모으지 않습니다</span></h2>
+        <p>이 앱에는 회원가입도 로그인도 없습니다. 다음 중 어느 것도 받지 않고, 만들지 않고, 보관하지 않습니다.</p>
+        <ul>
+          <li>이름 · 생년월일 · 성별</li>
+          <li>이메일 주소 · 전화번호</li>
+          <li>주소록 · 사진 · 파일</li>
+          <li>위치</li>
+        </ul>
+        <p class="callout">저희는 서버를 두고 있지 않습니다. 앱이 만든 정보가 저희에게 오는 길 자체가 없습니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span><span>마이크 — 재기만 하고 남기지 않습니다</span></h2>
+        <p>‘청력 보호’ 화면에서 지금 방이 얼마나 시끄러운지(dB) 보여주기 위해 마이크를 씁니다.
+          이때 소리는 <strong>얼마나 큰가라는 숫자 하나로만</strong> 바뀝니다.</p>
+        <ul>
+          <li>녹음 파일을 만들지 않습니다.</li>
+          <li>무슨 말을 했는지 알아듣지 않습니다.</li>
+          <li>폰 밖으로 아무것도 보내지 않습니다.</li>
+          <li>측정 화면을 나가면 마이크 사용이 그 자리에서 끝납니다.</li>
+        </ul>
+        <p>마이크 허락은 언제든 폰 설정에서 거둘 수 있습니다. 거둬도 소리를 트는 기능은 그대로 씁니다.
+          소리 크기 측정만 못 하게 됩니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span><span>광고 — 직접 누르는 하나뿐입니다</span></h2>
+        <p>이 앱에는 배너 광고도, 화면을 덮는 전면 광고도 없습니다.
+          잠긴 소리를 열 때 <strong>사용자가 직접 눌러서 보는 보상형 광고 하나</strong>뿐이고,
+          누르지 않으면 광고가 나오지 않습니다.</p>
+        <p>광고는 구글의 <strong>애드몹(AdMob)</strong> 이 보여줍니다. 광고를 볼 때
+          구글은 광고 식별자(광고 ID), 기기 종류, 접속한 인터넷 주소(IP)에서 짐작한 대략적인 지역 같은 것을
+          자기 정책에 따라 모을 수 있습니다. 이것은 구글이 모으는 것이고 저희는 받아보지 않습니다.
+          자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">구글이 파트너 사이트에서 정보를 쓰는 방법</a> 에 나와 있습니다.</p>
+        <p>유럽·영국에서 앱을 켜면 맞춤 광고를 써도 되는지 <strong>먼저 묻는 창</strong>이 뜹니다.
+          한 번 고른 뒤에도 앱의 <strong>설정 → 광고 개인정보 설정</strong> 에서 다시 고를 수 있습니다.</p>
+        <p>광고 ID 는 폰 설정에서 직접 지우거나 새것으로 바꿀 수 있습니다.
+          안드로이드 <strong>설정 → 개인정보 보호 → 광고</strong> 를 열면 됩니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span><span>결제 — 구글이 처리합니다</span></h2>
+        <p>소리를 전부 열어두는 한 번 결제가 있습니다. 결제는 <strong>구글 플레이</strong> 가 처리하며,
+          카드 번호나 결제 정보는 <strong>저희 앱을 거치지 않습니다.</strong> 저희는 볼 수 없습니다.</p>
+        <p>앱이 폰에 적어두는 것은 <strong>‘샀다 / 안 샀다’ 라는 표시 하나</strong>뿐입니다.
+          그 표시에는 누가 샀는지에 대한 정보가 들어 있지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span><span>폰 안에만 남는 것</span></h2>
+        <p>앱을 편하게 쓰기 위해 아래를 폰 안에 저장합니다. 전부 <strong>이 폰을 벗어나지 않습니다.</strong></p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>무엇을</th><th>왜</th><th>어디에</th><th>언제 사라지나</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>마이크로 들어온 소리</th><td>지금 크기(dB) 계산</td><td>폰 메모리에 잠깐</td><td>측정을 멈추면 바로</td></tr>
+              <tr><th>고른 소리와 볼륨</th><td>다음에 그대로 켜기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>자주 쓰는 소리</th><td>맨 위에 두기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>고른 언어</th><td>같은 언어로 보여주기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>「내가 잘 때 / 아기 재울 때」</th><td>기준 크기를 맞추기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>광고로 열어둔 남은 시각</th><td>6시간 동안 열어두기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>결제 여부</th><td>산 소리를 열어두기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+              <tr><th>측정값 보정 숫자</th><td>더 정확하게 재기</td><td>폰 안</td><td>앱을 지우면</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span><span>재생 중에 뜨는 알림</span></h2>
+        <p>소리가 나는 동안 잠금화면과 알림창에 재생 알림이 뜹니다.
+          이것은 안드로이드가 <strong>소리를 끊지 않게 하려고</strong> 요구하는 것이고,
+          거기에는 지금 트는 소리의 이름밖에 들어가지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span><span>아이에 대해</span></h2>
+        <p>이 앱은 <strong>어른이 쓰는 앱</strong>입니다. 아기를 재우는 데 도움이 되는 기능이 들어 있지만,
+          앱을 켜고 만지는 사람은 폰을 가진 어른입니다.</p>
+        <p>저희는 만 14세 미만(한국 기준) 또는 만 13세 미만(미국 COPPA 기준) 아이에게서
+          어떤 정보도 일부러 모으지 않습니다. 애초에 <strong>누구에게서도 개인정보를 모으지 않습니다.</strong></p>
+      </section>
+
+      <section>
+        <h2><span class="num">09</span><span>내 정보를 지우려면</span></h2>
+        <p>저희가 가지고 있는 것이 없으므로 지워달라고 요청할 대상이 없습니다.
+          폰에 남은 것은 <strong>앱을 지우면 함께 사라집니다.</strong>
+          지우지 않고 비우고 싶다면 안드로이드 <strong>설정 → 애플리케이션 → 밤소리 → 저장공간 → 데이터 삭제</strong> 를 누르면 됩니다.</p>
+        <p>광고와 관련해 구글이 가지고 있는 것은 위 4번의 구글 링크에서 다룰 수 있습니다.
+          결제 기록은 구글 플레이 계정에 남습니다.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">10</span><span>이 방침이 바뀌면</span></h2>
+        <p>내용이 바뀌면 이 쪽을 고치고 맨 위의 날짜를 새로 적습니다.
+          앱이 모으는 것이 늘어나는 큰 변화가 생기면 앱 안에서도 알려드립니다.</p>
+      </section>
+
+      <footer>
+        <p>JLUXENA STUDIO</p>
+        <p><a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a></p>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- ===================== English ===================== -->
+  <main id="en" lang="en" hidden>
+
+    <div class="wrap" style="gap:40px">
+
+      <div class="summary">
+        <h2>In short</h2>
+        <ul>
+          <li>There is no account. We never ask for your name, email, or phone number.</li>
+          <li>The microphone runs only while you are measuring loudness. Nothing is recorded or kept.</li>
+          <li>Your sounds and settings stay <strong>on your phone</strong> and are gone when you uninstall.</li>
+        </ul>
+      </div>
+
+      <section>
+        <h2><span class="num">01</span><span>Who made this, and how to reach us</span></h2>
+        <p>This app is made by <strong>JLUXENA STUDIO</strong>. If you have a question about this policy,
+          write to <a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a>.</p>
+        <p>This policy covers <strong>Everhush</strong> for Android (package <code>com.jluxena.sleep</code>).
+          The same app is published as <strong>밤소리</strong> in Korea.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span><span>We do not collect personal information</span></h2>
+        <p>The app has no sign-up and no sign-in. We do not ask for, create, or store any of the following:</p>
+        <ul>
+          <li>Name, date of birth, gender</li>
+          <li>Email address, phone number</li>
+          <li>Contacts, photos, files</li>
+          <li>Location</li>
+        </ul>
+        <p class="callout">We run no server of our own. There is no path by which anything the app creates could reach us.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span><span>The microphone measures, it does not keep</span></h2>
+        <p>On the hearing-protection screen, the microphone is used to show how loud the room is right now, in decibels.
+          The sound is turned into <strong>a single number for loudness</strong> and nothing else.</p>
+        <ul>
+          <li>No recording file is created.</li>
+          <li>No speech is recognised or transcribed.</li>
+          <li>Nothing leaves your phone.</li>
+          <li>The microphone stops the moment you leave the measuring screen.</li>
+        </ul>
+        <p>You can withdraw microphone permission at any time in your phone's settings. Playback keeps working
+          without it — only the loudness meter stops.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span><span>Ads — one, and only if you tap it</span></h2>
+        <p>There are no banner ads and no full-screen ads. There is exactly one <strong>rewarded ad</strong>,
+          which you tap yourself to open the locked sounds. If you never tap it, it never appears.</p>
+        <p>Ads are served by Google <strong>AdMob</strong>. When an ad is shown, Google may collect
+          things such as your advertising identifier, device type, and an approximate region inferred from your
+          IP address, under Google's own policies. Google collects this; we do not receive it.
+          See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites or apps that use its services</a>.</p>
+        <p>In the EU and the UK, a consent form appears <strong>before</strong> any ad is requested.
+          You can change your answer later under <strong>Settings → Ad privacy settings</strong> in the app.</p>
+        <p>You can reset or delete your advertising ID in Android under
+          <strong>Settings → Privacy → Ads</strong>.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span><span>Payment is handled by Google</span></h2>
+        <p>There is a one-time purchase that opens every sound. It is processed by <strong>Google Play</strong>.
+          Card and payment details <strong>never pass through this app</strong>, and we cannot see them.</p>
+        <p>All the app stores is <strong>a single yes/no mark</strong> saying the purchase was made.
+          That mark contains nothing about who made it.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span><span>What stays on your phone</span></h2>
+        <p>The app saves the following on your device so it works the way you left it. None of it leaves the phone.</p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>What</th><th>Why</th><th>Where</th><th>Gone when</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Sound from the microphone</th><td>Calculating the current dB</td><td>Phone memory, briefly</td><td>You stop measuring</td></tr>
+              <tr><th>Your chosen sounds and volumes</th><td>Restoring your mix</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>Favourite sounds</th><td>Keeping them at the top</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>Chosen language</th><td>Showing the same language</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>“For me / for a baby”</th><td>Setting the safe-level target</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>Time your ad unlock ends</th><td>Keeping sounds open for 6 hours</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>Purchase made or not</th><td>Keeping bought sounds open</td><td>On the phone</td><td>You uninstall</td></tr>
+              <tr><th>Meter calibration offset</th><td>Measuring more accurately</td><td>On the phone</td><td>You uninstall</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span><span>The playback notification</span></h2>
+        <p>While sound is playing, a playback notification appears on your lock screen.
+          Android requires this so the audio is <strong>not cut off</strong> in the background.
+          It contains nothing but the name of the sound that is playing.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span><span>About children</span></h2>
+        <p>This is an <strong>app for adults</strong>. It includes features that help settle a baby,
+          but the person opening and using it is the adult holding the phone.</p>
+        <p>We do not knowingly collect information from children under 13 (COPPA) or under 14 (Korea).
+          In fact we <strong>collect no personal information from anyone.</strong></p>
+      </section>
+
+      <section>
+        <h2><span class="num">09</span><span>Deleting your data</span></h2>
+        <p>We hold nothing, so there is nothing to request the deletion of.
+          What sits on your phone <strong>disappears when you uninstall the app.</strong>
+          To clear it without uninstalling, go to Android
+          <strong>Settings → Apps → Everhush → Storage → Clear data</strong>.</p>
+        <p>Anything Google holds for advertising can be handled through the Google links in section 04.
+          Purchase records stay with your Google Play account.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">10</span><span>Changes to this policy</span></h2>
+        <p>If this policy changes, we update this page and the date at the top.
+          If a change means the app starts collecting something it did not before, we will also say so inside the app.</p>
+      </section>
+
+      <footer>
+        <p>JLUXENA STUDIO</p>
+        <p><a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a></p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script>
+  (function () {
+    var ko = document.getElementById('ko');
+    var en = document.getElementById('en');
+    var btnKo = document.getElementById('btn-ko');
+    var btnEn = document.getElementById('btn-en');
+    var title = document.querySelector('h1');
+    var dateline = document.querySelector('.dateline');
+
+    function show(lang) {
+      var isKo = lang === 'ko';
+      ko.hidden = !isKo;
+      en.hidden = isKo;
+      btnKo.setAttribute('aria-pressed', String(isKo));
+      btnEn.setAttribute('aria-pressed', String(!isKo));
+      title.textContent = title.dataset[isKo ? 'ko' : 'en'];
+      dateline.textContent = dateline.dataset[isKo ? 'ko' : 'en'];
+      document.documentElement.lang = lang;
+    }
+
+    btnKo.addEventListener('click', function () { show('ko'); });
+    btnEn.addEventListener('click', function () { show('en'); });
+
+    // 폰 언어가 한국어가 아니면 영어로 연다.
+    if (!(navigator.language || '').toLowerCase().startsWith('ko')) show('en');
+  })();
+</script>
+</body>
+</html>

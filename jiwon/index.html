@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>청년지원금 개인정보처리방침</title>
+<style>
+  /* 앱(lib/theme.dart)과 같은 색을 쓴다. 앱을 쓰다 이 페이지로 넘어와도
+     같은 서비스라는 느낌이 끊기지 않게. */
+  :root {
+    --paper:     #FAF7F0;   /* 아이보리 종이 */
+    --card:      #FFFFFF;
+    --ink:       #15201C;
+    --ink-soft:  #4A554F;
+    --ink-faint: #626C66;
+    --line:      #E8E3D7;
+    --brand:     #2F5B4C;
+    --brand-ink: #0F3B31;   /* 깊은 초록 */
+    --tint:      #EDF0EA;
+    --out:       #8A4A18;   /* 밖으로 나가는 것 */
+    --out-tint:  #F6E6D8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #12150F;
+      --card:      #1A1E17;
+      --ink:       #ECE9DF;
+      --ink-soft:  #B0B5A8;
+      --ink-faint: #8A9084;
+      --line:      #2C3128;
+      --brand:     #8FC0A9;
+      --brand-ink: #A9D3BC;
+      --tint:      #1E2A22;
+      --out:       #E0A46E;
+      --out-tint:  #33241A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #12150F;
+    --card:      #1A1E17;
+    --ink:       #ECE9DF;
+    --ink-soft:  #B0B5A8;
+    --ink-faint: #8A9084;
+    --line:      #2C3128;
+    --brand:     #8FC0A9;
+    --brand-ink: #A9D3BC;
+    --tint:      #1E2A22;
+    --out:       #E0A46E;
+    --out-tint:  #33241A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic",
+                 "Noto Sans KR", system-ui, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 36px 20px 80px;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  /* ── 머리말 ───────────────────────────── */
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .eyebrow {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--brand);
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .meta {
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    margin: 0;
+  }
+
+  /* ── 한 줄 요약 ───────────────────────── */
+  .lede {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 24px 22px;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .lede strong { color: var(--brand-ink); }
+
+  /* ── 나가는 것 / 안 나가는 것 ─────────── */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 560px) {
+    .split { grid-template-columns: 1fr 1fr; }
+  }
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .panel h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+  .panel.goes h3 { color: var(--out); }
+  .panel.goes .dot { background: var(--out); }
+  .panel.stays h3 { color: var(--brand); }
+  .panel.stays .dot { background: var(--brand); }
+  .panel ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .panel .foot {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+
+  /* ── 본문 ─────────────────────────────── */
+  section { display: flex; flex-direction: column; gap: 12px; }
+  h2 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--line);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .num {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--brand);
+    font-variant-numeric: tabular-nums;
+    flex: 0 0 auto;
+  }
+  p { margin: 0; }
+  section ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  a { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  .note {
+    background: var(--tint);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .scroll { overflow-x: auto; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 420px;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+    background: var(--tint);
+  }
+  tr:last-child td { border-bottom: none; }
+
+  footer {
+    color: var(--ink-faint);
+    font-size: 13.5px;
+    text-align: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">개인정보처리방침</span>
+    <h1>청년지원금</h1>
+    <p class="meta">시행일 2026년 8월 15일 · 앱 버전 1.0.0</p>
+  </header>
+
+  <div class="lede">
+    <strong>이 앱은 회원가입도, 로그인도, 개발자가 운영하는 서버도 없습니다.</strong>
+    이름·전화번호·이메일 같은 것을 묻지 않으며, 앱에서 답한 내용을 휴대전화에
+    저장하지도 않습니다. 다만 지원금을 찾아 오려면 <strong>고른 지역 한 가지</strong>는
+    정부 자료 서버로 나갑니다. 아래에 무엇이 나가고 무엇이 나가지 않는지
+    그대로 적었습니다.
+  </div>
+
+  <div class="split">
+    <div class="panel goes">
+      <h3><span class="dot"></span>휴대전화 밖으로 나가는 것</h3>
+      <ul>
+        <li>고른 <strong>지역</strong> 한 가지 (예: 서울)</li>
+        <li>광고를 위한 <strong>광고 식별자·기기 정보</strong> (구글이 가져갑니다)</li>
+      </ul>
+      <p class="foot">지역은 “서울에 해당하는 지원금을 주세요”라고 묻기 위해서만 쓰이며,
+        누가 물었는지는 함께 보내지 않습니다.</p>
+    </div>
+    <div class="panel stays">
+      <h3><span class="dot"></span>나가지 않는 것</h3>
+      <ul>
+        <li><strong>나이</strong></li>
+        <li><strong>관심 분야</strong></li>
+        <li>어떤 지원금을 눌러 봤는지</li>
+      </ul>
+      <p class="foot">나이와 관심 분야는 받아 온 목록을 <em>휴대전화 안에서</em> 걸러내는 데만
+        쓰입니다. 밖으로 보내지 않습니다.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>앱이 저장하는 것</h2>
+    <p>
+      <strong>이용자가 답한 내용은 저장하지 않습니다.</strong> 나이·지역·관심 분야는
+      앱이 켜져 있는 동안 화면에만 잠깐 머물고, 앱을 닫으면 사라집니다.
+      다음에 다시 열면 처음부터 답하게 됩니다.
+    </p>
+    <p>
+      아래 3항의 광고 기능은 구글이 만든 부품을 그대로 쓰기 때문에, 그 부품이
+      광고를 보여주기 위한 자체 기록(예: 최근에 보여준 광고)을 휴대전화 안에
+      남길 수 있습니다. 이 기록에는 이용자가 앱에서 답한 내용이 들어 있지 않으며,
+      개발자는 그 내용을 볼 수 없습니다. 앱을 지우면 함께 지워집니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>지원금 정보를 가져오는 곳</h2>
+    <p>
+      앱에 보이는 지원금 목록은 개발자가 만든 것이 아니라, 정부가 공개한
+      <strong>온통청년(청년정책 정보)</strong> 자료를 그때그때 받아 와 보여주는 것입니다.
+    </p>
+    <div class="scroll">
+      <table>
+        <tr><th>보내는 것</th><th>어디로</th><th>왜</th></tr>
+        <tr>
+          <td>고른 지역 코드<br><span style="color:var(--ink-faint);font-size:13.5px">예: 서울 → 11110</span></td>
+          <td>youthcenter.go.kr<br><span style="color:var(--ink-faint);font-size:13.5px">한국청소년정책연구원</span></td>
+          <td>그 지역에 해당하는 지원금만 받아 오려고</td>
+        </tr>
+      </table>
+    </div>
+    <div class="note">
+      이때 이름·전화번호·계정 같은 것은 함께 보내지 않습니다. 인터넷을 쓰는 이상
+      접속 기록(IP 주소 등)은 상대 서버에 남을 수 있으며, 그 처리는 해당 기관의
+      방침을 따릅니다.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>광고</h2>
+    <p>
+      이 앱은 무료로 제공되며, 운영에 필요한 비용을 광고로 충당합니다.
+      구글 애드몹(Google AdMob) 광고가 <strong>다음 자리에</strong> 표시됩니다.
+    </p>
+    <ul>
+      <li>질문·결과·상세 화면 <strong>맨 아래</strong>의 띠 광고</li>
+      <li>지원금 목록 <strong>사이</strong>에 가끔 끼는 네모 광고
+        (‘광고’라고 적어 두어 지원금 안내와 구분됩니다)</li>
+      <li>지원금 상세를 여러 번 보고 목록으로 돌아올 때, 그리고 앱으로
+        다시 돌아왔을 때 <strong>화면 전체 광고</strong>가 표시될 수 있습니다</li>
+    </ul>
+    <p>
+      화면 전체 광고에는 <strong>이용자를 방해하지 않기 위한 제한</strong>을
+      두었습니다. 앱을 처음 켤 때나 질문에 답하는 도중에는 표시되지 않으며,
+      한 번 표시된 뒤 일정 시간 안에는 다시 표시되지 않습니다. 신청을 위해
+      기관의 공식 페이지로 이동했다가 돌아온 경우에도 표시하지 않습니다.
+    </p>
+    <p>
+      <strong>첫 화면에는 광고를 넣지 않았습니다.</strong>
+    </p>
+    <p>
+      광고를 제공하는 과정에서 구글은 광고 식별자·IP 주소 등 기기 정보를
+      수집·이용할 수 있습니다. 이는 구글의 정책에 따르며, 개발자는 그 정보를
+      받아 보거나 보관하지 않습니다. 자세한 내용은
+      <a href="https://policies.google.com/technologies/ads?hl=ko">구글 광고 정책</a>에서
+      확인하실 수 있습니다.
+      </p>
+    <p>
+      유럽경제지역(EEA)·영국에서 앱을 켠 경우에는, 광고에 이용자의 정보를
+      쓰기 전에 <strong>동의를 묻는 창</strong>이 먼저 표시됩니다. 이 창은
+      구글이 제공하는 것이며, 이용자가 고른 답에 따라 맞춤 광고 여부가
+      결정됩니다. 대한민국을 비롯한 그 밖의 지역에서는 이 창이 표시되지
+      않습니다.
+    </p>
+    <div class="note">
+      광고 맞춤설정은 휴대전화의 <em>설정 → 개인정보 보호 → 광고</em>에서
+      직접 끄거나 광고 ID를 삭제할 수 있습니다.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>앱이 요청하는 권한</h2>
+    <p>
+      이 앱이 요청하는 권한은 <strong>인터넷 연결 하나뿐</strong>입니다.
+      지원금 목록과 광고를 받아 오는 데 씁니다.
+    </p>
+    <p>
+      연락처·사진·위치·통화 기록 등 어떤 권한도 요청하지 않습니다.
+      “사는 지역”은 위치 기능으로 알아내는 것이 아니라 이용자가 화면에서 직접 고릅니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>제3자 제공</h2>
+    <p>
+      개발자는 이용자의 개인정보를 수집하지 않으므로, 제3자에게 제공하거나
+      판매할 정보가 없습니다. 앱이 연결되는 외부 서비스는 위 2항의 온통청년과
+      3항의 구글 애드몹 두 곳뿐입니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>아동의 개인정보</h2>
+    <p>
+      이 앱은 청년 대상 정부 지원금을 안내하는 앱으로, 만 14세 미만 아동을
+      대상으로 하지 않으며 아동으로부터 어떠한 정보도 수집하지 않습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>이 앱은 정부 공식 앱이 아닙니다</h2>
+    <p>
+      이 앱은 정부·공공기관이 만들거나 운영하는 앱이 아니며, 공개된 자료를 모아
+      보기 쉽게 안내하는 개인 개발자의 앱입니다. 실제 지원 자격·금액·신청 기간은
+      반드시 각 기관의 공식 안내에서 최종 확인해 주세요.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>방침의 변경</h2>
+    <p>
+      이 방침이 바뀌면 앱 업데이트와 함께 이 페이지의 내용을 고치고, 위쪽의
+      시행일을 새로 적습니다. 이용자에게 불리한 변경이 있을 경우에는 앱 안에서
+      따로 알려 드립니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>문의</h2>
+    <p>
+      개인정보 처리에 관해 궁금한 점이나 요청 사항이 있으시면 아래로 연락해 주세요.
+    </p>
+    <div class="note">
+      이메일: <a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    청년지원금 · 개인정보처리방침 · 시행일 2026년 8월 15일
+  </footer>
+
+</div>
+</body>
+</html>
