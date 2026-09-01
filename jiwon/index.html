@@ -232,15 +232,15 @@
   <header>
     <span class="eyebrow">개인정보처리방침</span>
     <h1>청년지원금</h1>
-    <p class="meta">시행일 2026년 8월 28일 · 앱 버전 1.0.0</p>
+    <p class="meta">시행일 2026년 9월 2일 · 앱 버전 1.2.0</p>
   </header>
 
   <div class="lede">
-    <strong>이 앱은 회원가입도, 로그인도, 개발자가 운영하는 서버도 없습니다.</strong>
+    <strong>이 앱은 회원가입도, 로그인도 없습니다.</strong>
     이름·전화번호·이메일 같은 것을 묻지 않으며, 앱에서 답한 내용을 휴대전화에
-    저장하지도 않습니다. 다만 지원금을 찾아 오려면 <strong>고른 지역 한 가지</strong>는
-    정부 자료 서버로 나갑니다. 아래에 무엇이 나가고 무엇이 나가지 않는지
-    그대로 적었습니다.
+    저장하지도 않습니다. 다만 지원금 목록을 받아 오려면 <strong>고른 지역
+    한 가지</strong>는 밖으로 나갑니다. 아래에 무엇이 나가고 무엇이 나가지
+    않는지 그대로 적었습니다.
   </div>
 
   <div class="split">
@@ -250,8 +250,8 @@
         <li>고른 <strong>지역</strong> 한 가지 (예: 서울)</li>
         <li>광고를 위한 <strong>광고 식별자·기기 정보</strong> (구글이 가져갑니다)</li>
       </ul>
-      <p class="foot">지역은 “서울에 해당하는 지원금을 주세요”라고 묻기 위해서만 쓰이며,
-        누가 물었는지는 함께 보내지 않습니다.</p>
+      <p class="foot">지역은 “서울 목록 파일을 주세요”라고 요청하는 데만 쓰이며,
+        누가 요청했는지는 함께 보내지 않습니다.</p>
     </div>
     <div class="panel stays">
       <h3><span class="dot"></span>나가지 않는 것</h3>
@@ -284,15 +284,22 @@
     <h2><span class="num">02</span>지원금 정보를 가져오는 곳</h2>
     <p>
       앱에 보이는 지원금 목록은 개발자가 만든 것이 아니라, 정부가 공개한
-      <strong>온통청년(청년정책 정보)</strong> 자료를 그때그때 받아 와 보여주는 것입니다.
+      <strong>온통청년(청년정책 정보)</strong> 자료입니다.
+    </p>
+    <p>
+      2026년 9월 2일부터는 <strong>앱이 정부 서버를 직접 부르지 않습니다.</strong>
+      개발자가 <strong>하루 한 번</strong> 정부 자료를 받아 지역별로 정리해 두면,
+      앱은 자기 지역 파일 하나를 받아 그대로 보여줍니다. 이렇게 바꾼 이유는
+      자료가 잘못됐을 때(예: 다른 지역 지원금이 섞여 나오는 문제) 앱을 새로
+      내지 않고 <strong>몇 분 안에 고칠 수 있기</strong> 때문입니다.
     </p>
     <div class="scroll">
       <table>
         <tr><th>보내는 것</th><th>어디로</th><th>왜</th></tr>
         <tr>
           <td>고른 지역 코드<br><span style="color:var(--ink-faint);font-size:13.5px">예: 서울 → 11110</span></td>
-          <td>youthcenter.go.kr<br><span style="color:var(--ink-faint);font-size:13.5px">한국청소년정책연구원</span></td>
-          <td>그 지역에 해당하는 지원금만 받아 오려고</td>
+          <td>ljn03012-a11y.github.io<br><span style="color:var(--ink-faint);font-size:13.5px">GitHub Pages · 개발자의 자료 보관 주소</span></td>
+          <td>그 지역 지원금 목록 파일을 받아 오려고<br><span style="color:var(--ink-faint);font-size:13.5px">주소에 지역 코드가 들어갑니다 (예: /data/11110.json)</span></td>
         </tr>
       </table>
     </div>
@@ -370,8 +377,10 @@
     <h2><span class="num">05</span>제3자 제공</h2>
     <p>
       개발자는 이용자의 개인정보를 수집하지 않으므로, 제3자에게 제공하거나
-      판매할 정보가 없습니다. 앱이 연결되는 외부 서비스는 위 2항의 온통청년과
-      3항의 구글 애드몹 두 곳뿐입니다.
+      판매할 정보가 없습니다. 앱이 연결되는 외부 서비스는 위 2항의
+      <strong>GitHub Pages</strong>(자료 보관)와 3항의 <strong>구글 애드몹</strong>
+      두 곳뿐입니다. 정부 자료(온통청년)는 개발자가 하루 한 번 받아 오는 것이며,
+      <strong>이용자의 휴대전화가 정부 서버에 직접 연결되지는 않습니다.</strong>
     </p>
   </section>
 
@@ -412,7 +421,7 @@
   </section>
 
   <footer>
-    청년지원금 · 개인정보처리방침 · 시행일 2026년 8월 28일
+    청년지원금 · 개인정보처리방침 · 시행일 2026년 9월 2일
   </footer>
 
 </div>
