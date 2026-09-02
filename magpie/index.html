@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>까치뉴스 개인정보처리방침</title>
+<style>
+  /* 앱(lib/theme.dart)과 같은 색을 쓴다 — 까치 남색 + 꼬리 초록. */
+  :root {
+    --paper: #FFFFFF;
+    --card: #F6F8FB;
+    --ink: #1B2A4A;      /* 까치 남색 */
+    --ink-soft: #45516B;
+    --ink-faint: #8A8F99;
+    --line: #E6E8EC;
+    --brand: #2E9E7A;    /* 까치 꼬리 초록 */
+    --brand-ink: #1F7A5C;
+    --tint: #EAF5F0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #141A2B; --card: #1B2540; --ink: #E9ECF4; --ink-soft: #B3BACB;
+      --ink-faint: #808799; --line: #2A3350; --brand: #4FC59F;
+      --brand-ink: #7ED9BC; --tint: #1C2F2A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic",
+      "Noto Sans KR", system-ui, sans-serif;
+    line-height: 1.8; margin: 0; padding: 36px 20px 80px; font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+  .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .14em; color: var(--brand); }
+  h1 { font-size: 30px; font-weight: 800; letter-spacing: -.03em; line-height: 1.25; margin: 0; }
+  .meta { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+  .lede {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 22px; font-size: 17px; line-height: 1.75;
+  }
+  .lede strong { color: var(--brand-ink); }
+  section { display: flex; flex-direction: column; gap: 12px; }
+  h2 {
+    font-size: 19px; font-weight: 800; letter-spacing: -.02em; margin: 0;
+    padding-bottom: 10px; border-bottom: 2px solid var(--line);
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  h2 .num { font-size: 13px; font-weight: 800; color: var(--brand); }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  a { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 3px; }
+  .note { background: var(--tint); border-radius: 14px; padding: 16px 18px; font-size: 15px; line-height: 1.7; }
+  footer { color: var(--ink-faint); font-size: 13.5px; text-align: center; padding-top: 12px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">개인정보처리방침</span>
+    <h1>까치뉴스</h1>
+    <p class="meta">시행일 2026년 9월 2일 · 앱 버전 1.0.0</p>
+  </header>
+
+  <div class="lede">
+    <strong>까치뉴스는 회원가입도, 로그인도 없습니다.</strong>
+    이름·이메일·전화번호 같은 개인정보를 서버로 수집하지 않습니다.
+    키워드·저장한 기사·설정은 전부 이용자의 휴대전화 안에만 있습니다.
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>폰 안에만 저장되는 것</h2>
+    <p>
+      키워드, 켜고 끈 언론사, 저장한 기사, 읽음 표시, 화면 설정 —
+      전부 이용자의 휴대전화 안에만 있으며 <strong>앱을 삭제하면 함께
+      지워집니다.</strong> 개발자는 이 내용을 볼 수 없습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>광고 (Google AdMob)</h2>
+    <p>
+      앱은 무료 운영을 위해 구글 애드몹 광고를 표시합니다.
+      광고 자리는 <strong>세 곳</strong>입니다.
+    </p>
+    <ul>
+      <li>홈 화면 <strong>맨 아래</strong>의 띠 광고</li>
+      <li>앱을 <strong>켤 때</strong> 표지 화면 위에 표시되는
+        <strong>화면 전체 광고</strong> (전면 광고)</li>
+      <li>앱을 <strong>끌 때</strong> 뜨는 종료 확인 창 가운데의 네모 광고
+        (‘광고’라고 적어 두었습니다)</li>
+    </ul>
+    <p>
+      <strong>기사 화면에는 광고를 표시하지 않습니다.</strong>
+      화면 전체 광고에는 제한을 두었습니다 — 앱을 설치하고 처음 켤 때와
+      알림을 눌러 켰을 때는 표시되지 않고, 4시간에 한 번까지만 표시되며,
+      광고가 준비되지 않으면 기다리지 않고 바로 앱으로 들어갑니다.
+    </p>
+    <p>
+      광고를 제공하는 과정에서 구글은 광고 식별자(광고 ID), 기기 정보,
+      IP 주소 기반의 대략적 위치, 앱 이용 정보를 수집할 수 있습니다.
+      이는 구글의 정책에 따르며, 개발자는 그 정보를 받아 보거나 보관하지
+      않습니다. 자세한 내용은
+      <a href="https://policies.google.com/technologies/partner-sites?hl=ko">구글의 안내</a>에서
+      확인하실 수 있습니다.
+    </p>
+    <div class="note">
+      광고 맞춤설정은 휴대전화의 <strong>설정 → Google → 광고</strong>에서
+      광고 ID 를 재설정하거나 맞춤 광고를 끄는 것으로 조절할 수 있습니다.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>뉴스·행사 데이터</h2>
+    <p>
+      뉴스는 각 언론사 서버·Google 뉴스 검색·네이버 뉴스 검색(공식
+      오픈API)에서, 축제·행사 정보는 한국관광공사 TourAPI 에서
+      <strong>이용자의 휴대전화가 직접</strong> 받아옵니다. 이 과정에서 해당
+      서버는 통상적인 접속 기록(IP 주소, 검색어 등)을 남길 수 있으며,
+      그 처리는 각 기관의 방침을 따릅니다.
+    </p>
+    <p>
+      언론사 주소록(어느 언론사의 RSS 를 읽을지 목록)은 개발자의 자료 주소
+      (ljn03012-a11y.github.io)에서 받아옵니다 — 목록 파일 하나이며,
+      <strong>이용자가 무엇을 읽었는지는 보내지 않습니다.</strong>
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>알림</h2>
+    <p>
+      속보·키워드 알림은 <strong>이용자의 휴대전화가 직접 확인해 스스로
+      띄웁니다.</strong> 개발자 서버가 없고, 푸시 토큰을 어디에도 보내지
+      않습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>제3자 제공</h2>
+    <p>
+      개발자는 이용자의 개인정보를 수집하지 않으므로, 제3자에게 제공하거나
+      판매할 정보가 없습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>아동의 개인정보</h2>
+    <p>
+      이 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 어떠한
+      정보도 수집하지 않습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>파기</h2>
+    <p>모든 데이터는 휴대전화 안에만 있으므로, 앱 삭제로 즉시 파기됩니다.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>방침의 변경</h2>
+    <p>
+      이 방침이 바뀌면 이 페이지의 내용을 고치고 위쪽의 시행일을 새로
+      적습니다. 이용자에게 불리한 변경이 있을 경우에는 앱 안에서 따로
+      알려 드립니다.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>문의</h2>
+    <p>
+      개인정보 관련 문의: <a href="mailto:ljn03012@gmail.com">ljn03012@gmail.com</a>
+      (접수 후 10일 이내 회신)
+    </p>
+  </section>
+
+  <footer>
+    까치뉴스 · 개인정보처리방침 · 시행일 2026년 9월 2일
+  </footer>
+
+</div>
+</body>
+</html>
