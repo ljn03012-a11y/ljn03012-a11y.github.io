@@ -1,0 +1,45 @@
+# 까치뉴스 언론사 주소록이 살아 있는지 매일 검사한다.
+#
+# ## 무엇을 하나
+# magpie/sources.json 의 모든 RSS 주소를 실제로 받아 보고, 90개 미만이
+# 살아 있으면 **실패**한다. 실패하면 GitHub 이 주인에게 메일을 보낸다.
+#
+# ## 실패 메일을 받으면
+# 1. Actions 탭에서 이 실행을 열어 '죽음:' 목록을 본다
+# 2. magpie/sources.json 에서 그 주소를 고치거나 지운다
+# 3. push → 5분 안에 모든 사용자에게 반영. **앱은 안 내도 된다**
+#
+# ## 지원금(jiwon-data.yml)과 다른 점
+# 저쪽은 자료를 **만들어 커밋**하지만, 여기는 **검사만** 한다. 뉴스 기사
+# 자체는 각자의 폰이 언론사에서 직접 받는다(재배포하지 않는다 — 저작권).
+# 주소록을 자동으로 고치지 않는 것도 일부러다: 순간 장애로 멀쩡한 언론사가
+# 잘려 나가는 것보다, 사람이 목록을 보고 고치는 쪽이 안전하다.
+
+name: 까치뉴스 주소록 검사
+
+on:
+  schedule:
+    # 매일 한국시간 새벽 5시 10분 (UTC 20:10). 지원금 수집(04:30)과 겹치지 않게.
+    - cron: '10 20 * * *'
+  workflow_dispatch: # 손으로도 돌릴 수 있게
+  push:
+    paths:
+      - 'magpie/sources.json' # 주소록을 고쳐 올리면 바로 검사해 준다
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 주소록 검사
+        run: node tools/magpie/check.mjs

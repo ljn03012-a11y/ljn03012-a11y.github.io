@@ -1,0 +1,678 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-02T00:03:57.156445Z",
+  "outlets": {
+    "yna": "연합뉴스",
+    "newsis": "뉴시스",
+    "chosun": "조선일보",
+    "donga": "동아일보",
+    "khan": "경향신문",
+    "hani": "한겨레",
+    "mk": "매일경제",
+    "hankyung": "한국경제",
+    "sbs": "SBS",
+    "jtbc": "JTBC",
+    "ohmynews": "오마이뉴스",
+    "seoul": "서울신문",
+    "kmib": "국민일보",
+    "segye": "세계일보",
+    "nocut": "노컷뉴스",
+    "mt": "머니투데이",
+    "asiae": "아시아경제",
+    "fnnews": "파이낸셜뉴스",
+    "etnews": "전자신문",
+    "zdnet": "지디넷코리아",
+    "bloter": "블로터",
+    "itchosun": "IT조선",
+    "sportsdonga": "스포츠동아",
+    "sisain": "시사IN",
+    "sisajournal": "시사저널",
+    "mediatoday": "미디어오늘",
+    "womennews": "여성신문",
+    "daejonilbo": "대전일보"
+  },
+  "sources": [
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "속보",
+      "url": "https://newsis.com/RSS/sokbo.xml"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "속보",
+      "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "속보",
+      "url": "https://fs.jtbc.co.kr/RSS/newsflash.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "종합",
+      "url": "https://www.yna.co.kr/rss/news.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "종합",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "종합",
+      "url": "https://rss.donga.com/total.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "종합",
+      "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "종합",
+      "url": "https://www.hani.co.kr/rss/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "종합",
+      "url": "https://www.mk.co.kr/rss/30000001/"
+    },
+    {
+      "outlet": "ohmynews",
+      "name": "오마이뉴스",
+      "section": "종합",
+      "url": "https://rss.ohmynews.com/rss/ohmynews.xml"
+    },
+    {
+      "outlet": "kmib",
+      "name": "국민일보",
+      "section": "종합",
+      "url": "https://www.kmib.co.kr/rss/data/kmibRssAll.xml"
+    },
+    {
+      "outlet": "segye",
+      "name": "세계일보",
+      "section": "종합",
+      "url": "https://www.segye.com/Articles/RSSList/segye_recent.xml"
+    },
+    {
+      "outlet": "nocut",
+      "name": "노컷뉴스",
+      "section": "종합",
+      "url": "https://rss.nocutnews.co.kr/nocutnews.xml"
+    },
+    {
+      "outlet": "mt",
+      "name": "머니투데이",
+      "section": "종합",
+      "url": "https://rss.mt.co.kr/mt_news.xml"
+    },
+    {
+      "outlet": "asiae",
+      "name": "아시아경제",
+      "section": "종합",
+      "url": "https://www.asiae.co.kr/rss/all.htm"
+    },
+    {
+      "outlet": "fnnews",
+      "name": "파이낸셜뉴스",
+      "section": "종합",
+      "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml"
+    },
+    {
+      "outlet": "etnews",
+      "name": "전자신문",
+      "section": "종합",
+      "url": "https://rss.etnews.com/Section901.xml"
+    },
+    {
+      "outlet": "sisain",
+      "name": "시사IN",
+      "section": "종합",
+      "url": "https://www.sisain.co.kr/rss/allArticle.xml"
+    },
+    {
+      "outlet": "sisajournal",
+      "name": "시사저널",
+      "section": "종합",
+      "url": "https://www.sisajournal.com/rss/allArticle.xml"
+    },
+    {
+      "outlet": "mediatoday",
+      "name": "미디어오늘",
+      "section": "종합",
+      "url": "https://www.mediatoday.co.kr/rss/allArticle.xml"
+    },
+    {
+      "outlet": "womennews",
+      "name": "여성신문",
+      "section": "종합",
+      "url": "https://www.womennews.co.kr/rss/allArticle.xml"
+    },
+    {
+      "outlet": "daejonilbo",
+      "name": "대전일보",
+      "section": "종합",
+      "url": "https://www.daejonilbo.com/rss/allArticle.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "정치",
+      "url": "https://www.yna.co.kr/rss/politics.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "정치",
+      "url": "https://newsis.com/RSS/politics.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "정치",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/politics/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "정치",
+      "url": "https://rss.donga.com/politics.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "정치",
+      "url": "https://www.khan.co.kr/rss/rssdata/politic_news.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "정치",
+      "url": "https://www.hani.co.kr/rss/politics/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "정치",
+      "url": "https://www.mk.co.kr/rss/50200011/"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "정치",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "정치",
+      "url": "https://fs.jtbc.co.kr/RSS/politics.xml"
+    },
+    {
+      "outlet": "ohmynews",
+      "name": "오마이뉴스",
+      "section": "정치",
+      "url": "https://rss.ohmynews.com/rss/politics.xml"
+    },
+    {
+      "outlet": "seoul",
+      "name": "서울신문",
+      "section": "정치",
+      "url": "https://www.seoul.co.kr/xml/rss/rss_politics.xml"
+    },
+    {
+      "outlet": "kmib",
+      "name": "국민일보",
+      "section": "정치",
+      "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "경제",
+      "url": "https://www.yna.co.kr/rss/economy.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "경제",
+      "url": "https://www.yna.co.kr/rss/industry.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "경제",
+      "url": "https://newsis.com/RSS/economy.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "경제",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/economy/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "경제",
+      "url": "https://rss.donga.com/economy.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "경제",
+      "url": "https://www.khan.co.kr/rss/rssdata/economy_news.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "경제",
+      "url": "https://www.hani.co.kr/rss/economy/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "경제",
+      "url": "https://www.mk.co.kr/rss/30100041/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "경제",
+      "url": "https://www.mk.co.kr/rss/30200030/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "경제",
+      "url": "https://www.mk.co.kr/rss/50100032/"
+    },
+    {
+      "outlet": "hankyung",
+      "name": "한국경제",
+      "section": "경제",
+      "url": "https://www.hankyung.com/feed/economy"
+    },
+    {
+      "outlet": "hankyung",
+      "name": "한국경제",
+      "section": "경제",
+      "url": "https://www.hankyung.com/feed/finance"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "경제",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "경제",
+      "url": "https://fs.jtbc.co.kr/RSS/economy.xml"
+    },
+    {
+      "outlet": "ohmynews",
+      "name": "오마이뉴스",
+      "section": "경제",
+      "url": "https://rss.ohmynews.com/rss/economy.xml"
+    },
+    {
+      "outlet": "seoul",
+      "name": "서울신문",
+      "section": "경제",
+      "url": "https://www.seoul.co.kr/xml/rss/rss_economy.xml"
+    },
+    {
+      "outlet": "kmib",
+      "name": "국민일보",
+      "section": "경제",
+      "url": "https://www.kmib.co.kr/rss/data/kmibEcoRss.xml"
+    },
+    {
+      "outlet": "asiae",
+      "name": "아시아경제",
+      "section": "경제",
+      "url": "https://www.asiae.co.kr/rss/economy.htm"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "사회",
+      "url": "https://www.yna.co.kr/rss/society.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "사회",
+      "url": "https://newsis.com/RSS/society.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "사회",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/national/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "사회",
+      "url": "https://rss.donga.com/national.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "사회",
+      "url": "https://www.khan.co.kr/rss/rssdata/society_news.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "사회",
+      "url": "https://www.hani.co.kr/rss/society/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "사회",
+      "url": "https://www.mk.co.kr/rss/50300009/"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "사회",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "사회",
+      "url": "https://fs.jtbc.co.kr/RSS/society.xml"
+    },
+    {
+      "outlet": "ohmynews",
+      "name": "오마이뉴스",
+      "section": "사회",
+      "url": "https://rss.ohmynews.com/rss/society.xml"
+    },
+    {
+      "outlet": "seoul",
+      "name": "서울신문",
+      "section": "사회",
+      "url": "https://www.seoul.co.kr/xml/rss/rss_society.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "국제",
+      "url": "https://www.yna.co.kr/rss/international.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "국제",
+      "url": "https://newsis.com/RSS/international.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "국제",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/international/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "국제",
+      "url": "https://rss.donga.com/international.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "국제",
+      "url": "https://www.khan.co.kr/rss/rssdata/kh_world.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "국제",
+      "url": "https://www.hani.co.kr/rss/international/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "국제",
+      "url": "https://www.mk.co.kr/rss/30300018/"
+    },
+    {
+      "outlet": "hankyung",
+      "name": "한국경제",
+      "section": "국제",
+      "url": "https://www.hankyung.com/feed/international"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "국제",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=07&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "국제",
+      "url": "https://fs.jtbc.co.kr/RSS/international.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "문화",
+      "url": "https://www.yna.co.kr/rss/culture.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "문화",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/culture-life/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "문화",
+      "url": "https://rss.donga.com/culture.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "문화",
+      "url": "https://www.khan.co.kr/rss/rssdata/culture_news.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "문화",
+      "url": "https://www.hani.co.kr/rss/culture/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "문화",
+      "url": "https://www.mk.co.kr/rss/50400012/"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "문화",
+      "url": "https://fs.jtbc.co.kr/RSS/culture.xml"
+    },
+    {
+      "outlet": "ohmynews",
+      "name": "오마이뉴스",
+      "section": "문화",
+      "url": "https://rss.ohmynews.com/rss/culture.xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "IT",
+      "url": "https://rss.donga.com/science.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "IT",
+      "url": "https://www.khan.co.kr/rss/rssdata/it_news.xml"
+    },
+    {
+      "outlet": "hankyung",
+      "name": "한국경제",
+      "section": "IT",
+      "url": "https://www.hankyung.com/feed/it"
+    },
+    {
+      "outlet": "etnews",
+      "name": "전자신문",
+      "section": "IT",
+      "url": "https://rss.etnews.com/Section902.xml"
+    },
+    {
+      "outlet": "zdnet",
+      "name": "지디넷코리아",
+      "section": "IT",
+      "url": "https://feeds.feedburner.com/zdkorea"
+    },
+    {
+      "outlet": "bloter",
+      "name": "블로터",
+      "section": "IT",
+      "url": "https://www.bloter.net/rss/allArticle.xml"
+    },
+    {
+      "outlet": "itchosun",
+      "name": "IT조선",
+      "section": "IT",
+      "url": "https://it.chosun.com/rss/allArticle.xml"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "스포츠",
+      "url": "https://www.yna.co.kr/rss/sports.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "스포츠",
+      "url": "https://newsis.com/RSS/sports.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "스포츠",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/sports/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "스포츠",
+      "url": "https://rss.donga.com/sports.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "스포츠",
+      "url": "https://www.khan.co.kr/rss/rssdata/kh_sports.xml"
+    },
+    {
+      "outlet": "hani",
+      "name": "한겨레",
+      "section": "스포츠",
+      "url": "https://www.hani.co.kr/rss/sports/"
+    },
+    {
+      "outlet": "mk",
+      "name": "매일경제",
+      "section": "스포츠",
+      "url": "https://www.mk.co.kr/rss/71000001/"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "스포츠",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=09&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "스포츠",
+      "url": "https://fs.jtbc.co.kr/RSS/sports.xml"
+    },
+    {
+      "outlet": "sportsdonga",
+      "name": "스포츠동아",
+      "section": "스포츠",
+      "url": "https://sports.donga.com/rss"
+    },
+    {
+      "outlet": "yna",
+      "name": "연합뉴스",
+      "section": "연예",
+      "url": "https://www.yna.co.kr/rss/entertainment.xml"
+    },
+    {
+      "outlet": "newsis",
+      "name": "뉴시스",
+      "section": "연예",
+      "url": "https://newsis.com/RSS/entertain.xml"
+    },
+    {
+      "outlet": "chosun",
+      "name": "조선일보",
+      "section": "연예",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/entertainments/?outputType=xml"
+    },
+    {
+      "outlet": "donga",
+      "name": "동아일보",
+      "section": "연예",
+      "url": "https://rss.donga.com/entertainment.xml"
+    },
+    {
+      "outlet": "khan",
+      "name": "경향신문",
+      "section": "연예",
+      "url": "https://www.khan.co.kr/rss/rssdata/kh_entertainment.xml"
+    },
+    {
+      "outlet": "hankyung",
+      "name": "한국경제",
+      "section": "연예",
+      "url": "https://www.hankyung.com/feed/entertainment"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "연예",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=08&plink=RSSREADER"
+    },
+    {
+      "outlet": "jtbc",
+      "name": "JTBC",
+      "section": "연예",
+      "url": "https://fs.jtbc.co.kr/RSS/entertainment.xml"
+    },
+    {
+      "outlet": "sbs",
+      "name": "SBS",
+      "section": "생활",
+      "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=14&plink=RSSREADER"
+    }
+  ]
+}
