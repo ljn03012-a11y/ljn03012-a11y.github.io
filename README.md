@@ -10,6 +10,7 @@
 | 포토 스티커 | https://ljn03012-a11y.github.io/photosticker/ |
 | 네온 드로우 · Neon Draw | https://ljn03012-a11y.github.io/neondraw/ |
 | 나의 성경 | https://ljn03012-a11y.github.io/bible/ |
+| 연화 무당 | https://ljn03012-a11y.github.io/yeonhwa/ |
 
 ## 고치는 법
 
@@ -22,4 +23,5 @@
 - 청년지원금 — `C:\dev\jiwon\privacy_policy.html`
 - 밤소리 — `C:\dev\babysleep\store\개인정보처리방침.html`
 - 포토 스티커 — `C:\dev\photosticker\store\개인정보처리방침.md`
+- 연화 무당 — `yeonhwa` 저장소의 `privacy_policy.html`
 - 네온 드로우 — 원본이 여기뿐입니다
