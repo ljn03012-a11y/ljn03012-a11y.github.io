@@ -35,9 +35,9 @@
 <h2>2. 광고 (Google AdMob)</h2>
 <p>앱은 다음 자리에서 Google AdMob 광고를 보여 줍니다.</p>
 <ul>
-  <li><b>배너 광고</b> — 홈(오늘) 화면 아래</li>
-  <li><b>전면 광고</b> — 음식을 담은 뒤 가끔 (다섯 번에 한 번, 30분 간격 이상)</li>
+  <li><b>전면 광고</b> — 기록을 마친 뒤: 음식 담기 화면을 나올 때, 몸무게·인바디를 저장했을 때, 운동 "했어요"를 눌렀을 때, 일기를 쓰고 나올 때 (앞 전면 광고 뒤 3분 안에는 띄우지 않음)</li>
   <li><b>보상형 광고</b> — 이용자가 직접 누를 때만: 주간 리포트 자세히 보기. 광고가 없으면 그냥 보여 줍니다.</li>
+  <li><b>네이티브 광고</b> — 뒤로가기로 앱을 끌 때 뜨는 종료 창 안에 한 자리</li>
 </ul>
 <p>광고를 위해 Google이 다음 정보를 수집할 수 있습니다.</p>
 <table>
@@ -95,8 +95,8 @@
 <p>오늘 뭐 먹었지 (package <code>com.jluxena.calorie</code>) is a food diary app by an independent developer.
 There is no sign-up and no developer server. Your questionnaire answers, food logs, food photos, diary notes,
 weight and InBody records stay <b>only on your device</b> and are never uploaded; the App does not use AI photo
-recognition. Google AdMob shows banner, occasional interstitial (after saving food, at most once every five saves
-and 30 minutes) and optional rewarded ads, and may collect the advertising ID, IP address, device and diagnostic
+recognition. Google AdMob shows interstitial ads after you finish a record (food, weight, InBody, workout, diary;
+at most once every 3 minutes), optional rewarded ads and one native ad in the exit dialog, and may collect the advertising ID, IP address, device and diagnostic
 information and ad interactions (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>).
 Camera and photo access are used only when you take or pick a photo. Meal reminders are scheduled locally.
 Nutrition data: Korea MFDS national food nutrient database (KOGL Type 1). Estimates are for reference only,
