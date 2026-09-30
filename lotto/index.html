@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로또 뽑기 개인정보처리방침</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+  /* 색: 앱(로또 뽑기)의 크림·초록·금색 */
+  :root {
+    color-scheme: light dark;
+    --ground: #F5F3EB; --surface: #FFFFFF; --surface-2: #EFEDE2;
+    --ink: #23281F; --ink-soft: #6A705F; --line: #E2DFD3; --line-soft: #ECE9DE;
+    --green: #1F7A43; --green-dim: #2E9E5B; --gold: #A8842A;
+    --shadow: 0 1px 2px rgba(35, 40, 31, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #14180F; --surface: #1C2118; --surface-2: #232A1E;
+      --ink: #E7E8DE; --ink-soft: #99A08B; --line: #2C3327; --line-soft: #242B1F;
+      --green: #74CE95; --green-dim: #5FBC82; --gold: #D4B463;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+  }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: "IBM Plex Sans KR", "Malgun Gothic", -apple-system, sans-serif; font-size: 16px; line-height: 1.78; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 41rem; margin: 0 auto; padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) 5rem; display: flex; flex-direction: column; gap: 2.75rem; }
+  .masthead { display: flex; flex-direction: column; gap: .85rem; }
+  .eyebrow { font-size: .75rem; letter-spacing: .14em; font-weight: 600; color: var(--gold); margin: 0; }
+  h1 { font-family: "Gowun Batang", "Nanum Myeongjo", "Apple SD Gothic Neo", serif; font-weight: 700; font-size: clamp(1.75rem, 5.5vw, 2.4rem); line-height: 1.3; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+  .balls { display: flex; width: 8.75rem; height: 5px; border-radius: 3px; overflow: hidden; }
+  .balls i { flex: 1; }
+  .balls i:nth-child(1) { background: #FBC400; }
+  .balls i:nth-child(2) { background: #69C8F2; }
+  .balls i:nth-child(3) { background: #FF7272; }
+  .balls i:nth-child(4) { background: #AAAAAA; }
+  .balls i:nth-child(5) { background: #B0D840; }
+  .dates { font-size: .85rem; color: var(--ink-soft); margin: 0; }
+  .lede { margin: 0; font-size: 1.05rem; }
+  .glance { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; margin: 0; }
+  .glance div { padding: 1rem 1.1rem; border-inline-start: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: .2rem; }
+  .glance div:first-child { border-inline-start: 0; }
+  .glance dt { font-size: .72rem; letter-spacing: .1em; font-weight: 600; color: var(--ink-soft); margin: 0; }
+  .glance dd { margin: 0; font-family: "Gowun Batang", "Nanum Myeongjo", serif; font-size: 1.1rem; font-weight: 700; color: var(--green); }
+  @media (max-width: 30rem) {
+    .glance { grid-template-columns: 1fr; }
+    .glance div { border-inline-start: 0; border-block-start: 1px solid var(--line-soft); }
+    .glance div:first-child { border-block-start: 0; }
+  }
+  .sections { display: flex; flex-direction: column; gap: 2.25rem; }
+  section { display: flex; flex-direction: column; gap: .7rem; }
+  h2 { font-family: "Gowun Batang", "Nanum Myeongjo", "Apple SD Gothic Neo", serif; font-weight: 700; font-size: 1.22rem; line-height: 1.45; margin: 0; display: flex; align-items: baseline; gap: .6rem; text-wrap: balance; }
+  h2 .num { font-family: "IBM Plex Sans KR", sans-serif; font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--green); flex: none; min-width: 1.9rem; }
+  p { margin: 0; }
+  b { font-weight: 600; color: var(--ink); }
+  a { color: var(--green); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+  ul { margin: 0; padding-inline-start: 1.15rem; display: flex; flex-direction: column; gap: .45rem; }
+  li::marker { color: var(--green-dim); }
+  .scroller { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 26rem; font-size: .9rem; line-height: 1.6; }
+  caption { caption-side: top; text-align: start; font-size: .78rem; letter-spacing: .08em; font-weight: 600; color: var(--ink-soft); padding-block-end: .5rem; }
+  th, td { border-block-end: 1px solid var(--line); padding: .6rem .75rem; text-align: start; vertical-align: top; }
+  thead th { background: var(--surface-2); font-weight: 600; font-size: .8rem; letter-spacing: .04em; color: var(--ink-soft); }
+  tbody tr:last-child th, tbody tr:last-child td { border-block-end: 0; }
+  tbody th { font-weight: 600; white-space: nowrap; }
+  td code, th code { font-family: "IBM Plex Sans KR", monospace; font-size: .8rem; color: var(--ink-soft); display: block; }
+  footer { border-block-start: 1px solid var(--line); padding-block-start: 1.5rem; display: flex; flex-direction: column; gap: .4rem; font-size: .9rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">개인정보처리방침</p>
+    <h1>「로또 뽑기」 개인정보처리방침</h1>
+    <div class="balls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="dates">시행일 2026년 9월 2일 · 개정 2026년 9월 11일 (판매점 목록 네이티브 광고·문의 메일 정정) · 개발자 jluxena · 안드로이드 앱 (com.jluxena.lotto)</p>
+    <p class="lede">「로또 뽑기」(이하 "앱")는 개인 개발자가 만든 앱입니다.
+      앱은 회원가입이 없고, 개발자 서버가 없으며, 이용자의 개인정보를 수집·보관하지 않습니다.</p>
+  </header>
+
+  <dl class="glance">
+    <div><dt>회원가입</dt><dd>없음</dd></div>
+    <div><dt>개발자 서버</dt><dd>없음</dd></div>
+    <div><dt>기록이 있는 곳</dt><dd>내 기기 안</dd></div>
+  </dl>
+
+  <div class="scroller">
+    <table>
+      <caption>앱이 요구하는 권한 — 거부해도 앱은 쓸 수 있습니다</caption>
+      <thead>
+        <tr><th scope="col">권한</th><th scope="col">쓰임</th><th scope="col">거부하면</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">인터넷<code>INTERNET</code></th><td>새 회차 당첨번호를 받아 옵니다</td><td>이미 받아 둔 자료로만 동작합니다</td></tr>
+        <tr><th scope="row">카메라<code>CAMERA</code></th><td>복권 용지의 QR 을 읽습니다</td><td>번호를 직접 입력해 같은 일을 합니다</td></tr>
+        <tr><th scope="row">대략적 위치<code>ACCESS_COARSE_LOCATION</code></th><td>가까운 판매점을 거리순으로 정렬합니다</td><td>지역을 골라 찾습니다</td></tr>
+        <tr><th scope="row">알림<code>POST_NOTIFICATIONS</code></th><td>토요일 추첨 결과를 알려 줍니다</td><td>알림만 오지 않습니다</td></tr>
+        <tr><th scope="row">부팅 완료<code>RECEIVE_BOOT_COMPLETED</code></th><td>폰을 껐다 켜도 알림 예약을 지킵니다</td><td>재부팅 뒤 알림 예약이 사라집니다</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sections">
+
+    <section>
+      <h2><span class="num">1</span>앱 안에 저장되는 것</h2>
+      <p>뽑은 번호, "내 번호"에 기록한 복권 번호(QR 로 읽었거나 직접 적은 것),
+        고정수·제외수, 소리·알림 설정은 <b>모두 이용자의 기기 안에만</b> 저장됩니다.
+        개발자는 이 정보를 볼 수 없고, 앱을 삭제하면 함께 지워집니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">1-1</span>카메라 (복권 QR 확인)</h2>
+      <p>"QR 스캔" 기능은 복권 용지에 인쇄된 QR 코드를 읽어 회차와 번호를 알아내는 데만
+        카메라를 사용합니다. <b>사진이나 영상을 저장하거나 외부로 보내지 않으며</b>,
+        QR 인식은 기기 안에서 처리됩니다. 읽은 번호는 앱 안의 당첨번호 자료와만 맞춰 보고,
+        동행복권 사이트를 열지 않습니다. 카메라 권한을 거부해도 번호를 직접 입력해
+        같은 기능을 쓸 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">1-2</span>사진 저장 (갤러리)</h2>
+      <p>뽑기 결과에서 "번호 저장"을 누르면 앱이 만든 결과 그림 한 장을 기기의 사진 앱
+        (Pictures/로또 뽑기 폴더)에 넣을 수 있습니다. 이 기능은 앱이 만든 그림을 넣기만
+        할 뿐 <b>기기에 있는 다른 사진을 읽지 않으며</b>, 설정에서 끌 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>위치 정보</h2>
+      <p>"내 주변 판매점" 기능은 기기의 <b>대략적인 위치</b>를 사용합니다. 위치는
+        가까운 판매점을 정렬하는 데 <b>기기 안에서만</b> 쓰이고, 외부로 전송되거나
+        저장되지 않습니다. 위치 권한을 거부해도 지역 선택으로 모든 기능을 쓸 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>광고 (Google AdMob)</h2>
+      <p>앱은 Google AdMob 광고를 표시합니다(처음 설치 후 앱 설명이 끝날 때 전면 광고 한 번,
+        화면 하단 배너, 판매점 목록 사이 네이티브 광고, 종료 창 네이티브 광고).
+        이 과정에서 Google 이 광고 게재를 위해 아래 정보를 수집할 수 있습니다.</p>
+      <div class="scroller">
+        <table>
+          <thead><tr><th scope="col">항목</th><th scope="col">쓰임</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">광고 ID</th><td>광고 게재·빈도 제한·부정행위 방지</td></tr>
+            <tr><th scope="row">IP 주소·대략적 위치</th><td>지역에 맞는 광고</td></tr>
+            <tr><th scope="row">기기 정보(모델·OS 등)</th><td>광고 표시·측정</td></tr>
+            <tr><th scope="row">앱 상호작용(광고 조회 등)</th><td>광고 성과 측정</td></tr>
+            <tr><th scope="row">진단 정보(광고 SDK 오류·성능)</th><td>안정성 개선</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>자세한 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>과
+        <a href="https://support.google.com/admob/answer/6128543">AdMob 정책</a>을 참고하세요.
+        기기 설정 → Google → 광고에서 광고 ID 를 재설정하거나 맞춤 광고를 끌 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>당첨번호·판매점 정보</h2>
+      <p>당첨번호, 판매점, 1·2등 배출점 정보는 동행복권(dhlottery.co.kr)이 공개한
+        정보를 표시한 것입니다. 최신 회차를 확인할 때 앱이 동행복권 서버에 접속하며,
+        이때 이용자를 식별하는 정보는 보내지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>알림</h2>
+      <p>토요일 추첨 결과 알림은 기기 안에서 예약되는 로컬 알림입니다.
+        설정에서 언제든 끌 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>이 앱이 하지 않는 것</h2>
+      <ul>
+        <li>회원가입·로그인을 요구하지 않습니다.</li>
+        <li>연락처·파일에 접근하지 않고, 기기에 있는 사진을 읽지 않습니다
+          (앱이 만든 결과 그림을 사진 앱에 넣는 것뿐입니다).</li>
+        <li>카메라로 찍은 화면을 저장하거나 보내지 않습니다 (QR 인식에만 씁니다).</li>
+        <li>이용자 정보를 개발자 서버로 보내지 않습니다 (개발자 서버가 없습니다).</li>
+        <li>인앱 결제·구독이 없습니다.</li>
+        <li>복권 구매 기능이 없습니다. 이 앱은 재미로 번호를 뽑아 줄 뿐이며
+          당첨을 보장하지 않습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span>문의</h2>
+      <p>개인정보 관련 문의: <a href="mailto:jluxena3012@gmail.com">jluxena3012@gmail.com</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>이 방침이 바뀌면 이 페이지에서 알립니다.</p>
+    <p>이 앱은 동행복권·복권수탁사업자와 관련이 없는 개인 앱입니다.
+      복권 구매는 만 19세부터 가능하며, 과도한 구매는 도움이 되지 않습니다 — 도박문제 상담 ☎ 1336</p>
+  </footer>
+
+</main>
+</body>
+</html>
