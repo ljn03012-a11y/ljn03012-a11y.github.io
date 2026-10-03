@@ -11,6 +11,7 @@
 | 네온 드로우 · Neon Draw | https://ljn03012-a11y.github.io/neondraw/ |
 | 나의 성경 | https://ljn03012-a11y.github.io/bible/ |
 | 연화신녀 | https://ljn03012-a11y.github.io/yeonhwa/ |
+| 쉬운 카메라 | https://ljn03012-a11y.github.io/easycamera/ |
 
 ## 고치는 법
 
