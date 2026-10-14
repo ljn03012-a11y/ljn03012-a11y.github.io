@@ -75,7 +75,7 @@
     <p class="eyebrow">개인정보처리방침</p>
     <h1>「로또 뽑기」 개인정보처리방침</h1>
     <div class="balls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-    <p class="dates">시행일 2026년 9월 2일 · 개정 2026년 10월 8일 (뽑기 사이 전면 광고·보상형 광고·목록 사이 네이티브 광고 추가) · 개발자 jluxena · 안드로이드 앱 (com.jluxena.lotto)</p>
+    <p class="dates">시행일 2026년 9월 2일 · 개정 2026년 10월 14일 (추첨 전 알림 추가) · 개발자 jluxena · 안드로이드 앱 (com.jluxena.lotto)</p>
     <p class="lede">「로또 뽑기」(이하 "앱")는 개인 개발자가 만든 앱입니다.
       앱은 회원가입이 없고, 개발자 서버가 없으며, 이용자의 개인정보를 수집·보관하지 않습니다.</p>
   </header>
@@ -96,7 +96,7 @@
         <tr><th scope="row">인터넷<code>INTERNET</code></th><td>새 회차 당첨번호를 받아 옵니다</td><td>이미 받아 둔 자료로만 동작합니다</td></tr>
         <tr><th scope="row">카메라<code>CAMERA</code></th><td>복권 용지의 QR 을 읽습니다</td><td>번호를 직접 입력해 같은 일을 합니다</td></tr>
         <tr><th scope="row">대략적 위치<code>ACCESS_COARSE_LOCATION</code></th><td>가까운 판매점을 거리순으로 정렬합니다</td><td>지역을 골라 찾습니다</td></tr>
-        <tr><th scope="row">알림<code>POST_NOTIFICATIONS</code></th><td>토요일 추첨 결과를 알려 줍니다</td><td>알림만 오지 않습니다</td></tr>
+        <tr><th scope="row">알림<code>POST_NOTIFICATIONS</code></th><td>추첨 전(목·금·토)과 토요일 추첨 결과를 알려 줍니다</td><td>알림만 오지 않습니다</td></tr>
         <tr><th scope="row">부팅 완료<code>RECEIVE_BOOT_COMPLETED</code></th><td>폰을 껐다 켜도 알림 예약을 지킵니다</td><td>재부팅 뒤 알림 예약이 사라집니다</td></tr>
       </tbody>
     </table>
@@ -164,8 +164,8 @@
 
     <section>
       <h2><span class="num">5</span>알림</h2>
-      <p>토요일 추첨 결과 알림은 기기 안에서 예약되는 로컬 알림입니다.
-        설정에서 언제든 끌 수 있습니다.</p>
+      <p>추첨 전 알림(목·금 저녁, 토요일 낮)과 토요일 추첨 결과 알림은 기기 안에서 예약되는 로컬 알림입니다.
+        서버에서 보내는 알림이 아니며, 설정에서 언제든 따로따로 끌 수 있습니다.</p>
     </section>
 
     <section>
