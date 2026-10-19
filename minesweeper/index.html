@@ -39,7 +39,7 @@
 <p>앱은 다음 순간에 Google AdMob 광고를 보여 줍니다.</p>
 <ul>
   <li><b>화면 전체를 덮는 전면광고</b> — 앱을 켤 때마다 시작 화면 뒤에서(처음 깐 날은 언어를 고른 뒤),
-  그리고 한 판이 끝난 뒤(이기거나 졌을 때) <b>다시 하기·홈·새 게임·스마일 얼굴·난이도 고르기·창 닫기</b>처럼 다음 판으로 넘어가거나 나갈 때(광고 사이 최소 1분).
+  그리고 한 판이 끝난 뒤(이기거나 졌을 때) <b>다시 하기·홈·새 게임·스마일 얼굴·난이도 고르기·창 닫기</b>처럼 다음 판으로 넘어가거나 나갈 때(한 판마다, 누른 뒤 화면이 바뀌고 나서).
   <b>판을 푸는 도중이나 그림이 나타나는 동안에는 광고가 뜨지 않습니다.</b></li>
   <li><b>보상형 광고</b> — 이용자가 [힌트]를 누를 때만 나옵니다. 광고를 끝까지 보면 안전한 칸 하나를 알려 줍니다.</li>
   <li><b>네이티브 광고</b> — 앱을 끝낼 때 뜨는 종료 창 안의 광고 카드 한 장.</li>
@@ -70,8 +70,10 @@
   <tr><th>권한</th><th>이유</th></tr>
   <tr><td>인터넷</td><td>광고 표시, 그리고 이용자가 고르면 Play 게임즈 순위표</td></tr>
   <tr><td>진동</td><td>깃발을 꽂거나 지뢰를 밟을 때 진동 (설정에서 끌 수 있음)</td></tr>
+  <tr><td>알림</td><td>하루 두 번(폰 시계로 점심 12시 30분 · 저녁 8시) 한 판 하자는 알림. 처음 한 번 허용을 묻고, 거절하거나 폰 설정에서 끄면 오지 않습니다</td></tr>
+  <tr><td>부팅 완료 알림 받기</td><td>폰을 다시 켜면 지워지는 알림 예약을 다시 걸기</td></tr>
 </table>
-<p>카메라·위치·연락처·마이크·사진·알림은 쓰지 않습니다.</p>
+<p>카메라·위치·연락처·마이크·사진은 쓰지 않습니다. 알림 내용은 앱 안에 들어 있는 정해진 문장이며, 이를 위해 어떤 정보도 밖으로 보내지 않습니다.</p>
 
 <h2>5. 이 앱이 하지 않는 것</h2>
 <ul>
@@ -110,7 +112,7 @@ records at any time from Records → Reset records.</p>
 <p>The App shows Google AdMob ads at the following moments:</p>
 <ul>
   <li><b>Full-screen (interstitial) ads</b> — each time you open the App, after the start screen (on the very first launch, after you pick a language); and after a game ends (win or loss) when you
-  move on or leave — Again, Home, New game, the smiley face, choosing a level or closing the window (at least 1 minute between ads). <b>No ad ever appears while you are playing or
+  move on or leave — Again, Home, New game, the smiley face, choosing a level or closing the window (after every game, once the screen has changed). <b>No ad ever appears while you are playing or
   while a picture is being revealed.</b></li>
   <li><b>Rewarded ads</b> — only when you tap Hint. If you watch the ad to the end, the App shows you one safe
   cell.</li>
@@ -142,8 +144,10 @@ remove leaderboard data from your Google Play Games profile settings.</p>
   <tr><th>Permission</th><th>Why</th></tr>
   <tr><td>Internet</td><td>To show ads and, if you choose, Play Games leaderboards</td></tr>
   <tr><td>Vibrate</td><td>A buzz when you plant a flag or hit a mine (can be turned off in Settings)</td></tr>
+  <tr><td>Notifications</td><td>Two reminders a day to play (12:30 and 8 PM by your phone's clock). The App asks once; if you decline or turn them off in phone settings, none are sent</td></tr>
+  <tr><td>Run at startup</td><td>To set the reminders again after the phone restarts</td></tr>
 </table>
-<p>The App does not use the camera, location, contacts, microphone, photos or notifications.</p>
+<p>The App does not use the camera, location, contacts, microphone or photos. Reminder texts are fixed sentences built into the App; nothing is sent anywhere for them.</p>
 
 <h2>5. What the App never does</h2>
 <ul>
